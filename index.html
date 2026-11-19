@@ -3,23 +3,62 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zyro John D. Durana | Portfolio</title>
+
+<title>Zyro John D. Durana | Electrical Engineer Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     font-family:'Poppins',sans-serif;
-    line-height:1.6;
-    color:#333;
     background:#f5f7fa;
+    color:#333;
+    line-height:1.7;
 }
+
+/* Navigation */
+
+nav{
+    background:#0A2342;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,.15);
+}
+
+nav .container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+    padding:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:#F4B400;
+}
+
+/* Hero Section */
 
 header{
     background:
@@ -30,11 +69,47 @@ header{
 
     background-size:cover;
     background-position:center;
+
+    color:white;
+    text-align:center;
+    padding:120px 20px;
+}
+
+header img{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid white;
+    margin-bottom:25px;
+}
+
+header h1{
+    font-size:3rem;
+    margin-bottom:10px;
 }
 
 header p{
-    margin-top:10px;
-    font-size:1.2rem;
+    max-width:800px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+.hero-btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 25px;
+    text-decoration:none;
+    border-radius:30px;
+    background:#F4B400;
+    color:black;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.hero-btn:hover{
+    background:#ffd95a;
+    transform:translateY(-2px);
 }
 
 .container{
@@ -49,57 +124,106 @@ section{
 
 .section-title{
     text-align:center;
-    margin-bottom:40px;
     color:#0A2342;
+    margin-bottom:40px;
     font-size:2rem;
 }
 
-.card{
+.card,
+.skill-card,
+.project-card,
+.cert-card{
     background:white;
-    padding:25px;
     border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    margin-bottom:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.card{
+    padding:30px;
+}
+
+.stats,
+.skills,
+.projects,
+.certs{
+    display:grid;
+    gap:20px;
+}
+
+.stats{
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 }
 
 .skills{
-    display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.skill-card{
-    background:white;
-    padding:20px;
-    border-radius:15px;
-    box-shadow:0 5px 12px rgba(0,0,0,0.08);
 }
 
 .projects{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-    gap:20px;
-}
-
-.project-card{
-    background:white;
-    border-radius:15px;
-    padding:25px;
-    box-shadow:0 5px 12px rgba(0,0,0,0.08);
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 }
 
 .certs{
-    display:grid;
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:20px;
 }
 
+.skill-card,
+.project-card,
 .cert-card{
-    background:white;
-    padding:20px;
-    border-radius:15px;
-    box-shadow:0 5px 12px rgba(0,0,0,0.08);
+    padding:25px;
+    transition:.3s;
 }
+
+.skill-card:hover,
+.project-card:hover,
+.cert-card:hover{
+    transform:translateY(-5px);
+}
+
+.skill-card ul{
+    padding-left:20px;
+}
+
+.stat-box{
+    text-align:center;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.stat-box h2{
+    color:#0A2342;
+    font-size:2.5rem;
+}
+
+.tag{
+    display:inline-block;
+    margin:5px;
+    padding:6px 12px;
+    background:#F4B400;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:600;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact a{
+    color:#003566;
+    text-decoration:none;
+    font-weight:600;
+}
+
+blockquote{
+    font-size:1.2rem;
+    font-style:italic;
+    border-left:5px solid #F4B400;
+    padding-left:20px;
+}
+
+/* Footer */
 
 footer{
     background:#0A2342;
@@ -108,89 +232,114 @@ footer{
     padding:30px;
 }
 
-.contact{
-    text-align:center;
-}
-
-.contact a{
+footer a{
+    color:#F4B400;
     text-decoration:none;
-    color:#003566;
-    font-weight:600;
+    margin:0 10px;
 }
 
-ul{
-    padding-left:20px;
+footer a:hover{
+    text-decoration:underline;
 }
 
-.tag{
-    display:inline-block;
-    background:#F4B400;
-    color:#000;
-    padding:5px 12px;
-    margin:5px;
-    border-radius:20px;
-    font-size:14px;
-    font-weight:600;
+.social-icons{
+    margin-top:15px;
 }
 
-.hero-btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 25px;
-    background:#F4B400;
-    color:#000;
-    text-decoration:none;
-    border-radius:30px;
-    font-weight:bold;
+.social-icons a{
+    font-size:1.5rem;
 }
 
-.hero-btn:hover{
-    background:#ffd95a;
-}
+/* Mobile */
 
 @media(max-width:768px){
+
     header h1{
         font-size:2rem;
     }
+
+    nav .container{
+        gap:12px;
+    }
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- Navigation -->
+
+<nav>
+<div class="container">
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#certifications">Certifications</a>
+<a href="#leadership">Leadership</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<!-- Hero Section -->
+
 <header>
-<img src="profile.jpg"
-     alt="Profile Picture"
-     width="180"
-     style="
-        border-radius:50%;
-        border:5px solid white;
-        margin-bottom:25px;
-     ">
+
+<img src="profile.jpg" alt="Zyro John D. Durana">
 
 <h1>ZYRO JOHN D. DURANA</h1>
 
 <p>
-Electrical Engineer | Blockchain and Cryptocurrency Specialist | Lean Six Sigma Black Belt | Safety Officer 2 | Youth leader </p>
-
-<div>
+Electrical Engineer | Blockchain & Cryptocurrency Specialist |
+Lean Six Sigma Black Belt | Safety Officer II |
+Youth Leader & Humanitarian Volunteer
+</p>
 
 <a href="#contact" class="hero-btn">
 Contact Me
 </a>
 
 <a href="Zyro_Durana_Resume.pdf"
-   class="hero-btn"
-   style="margin-left:10px;"
-   target="_blank">
-Resume
+class="hero-btn"
+target="_blank">
+Download Resume
 </a>
-
-</div>
 
 </header>
 
+<!-- Statistics -->
+
+<section>
+
+<div class="container">
+
+<div class="stats">
+
+<div class="stat-box">
+<h2>5+</h2>
+<p>Professional Certifications</p>
+</div>
+
+<div class="stat-box">
+<h2>3+</h2>
+<p>Major Engineering Projects</p>
+</div>
+
+<div class="stat-box">
+<h2>100%</h2>
+<p>Commitment to Excellence</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- About -->
+
 <section id="about">
+
 <div class="container">
 
 <h2 class="section-title">About Me</h2>
@@ -198,23 +347,41 @@ Resume
 <div class="card">
 
 <p>
-I am an Electrical Engineer with expertise in power systems,
-renewable energy, process improvement, and emerging technologies.
-My professional experience includes solar power plant design,
-substation planning, equipment specification, engineering analysis,
-and technical documentation.
+Electrical Engineer with expertise in power systems,
+renewable energy development, substation engineering,
+technical analysis, equipment specification,
+and engineering documentation.
 
-I am also actively engaged in leadership and humanitarian service
-through the Philippine Red Cross Youth and various community
-development initiatives.
+My professional experience includes solar power plant design,
+transmission and distribution planning,
+protection system analysis,
+transformer calculations,
+renewable energy integration,
+and engineering project development.
+
+I am certified in Blockchain Technology,
+Ethereum Smart Contracts,
+Decentralized Finance (DeFi),
+Lean Six Sigma Black Belt,
+and Occupational Safety and Health.
+
+Beyond engineering,
+I actively serve in humanitarian and leadership initiatives
+through the Philippine Red Cross Youth and community
+development organizations dedicated to youth empowerment,
+resilience, and nation-building.
 </p>
 
 </div>
 
 </div>
+
 </section>
 
+<!-- Skills -->
+
 <section id="skills">
+
 <div class="container">
 
 <h2 class="section-title">Technical Skills</h2>
@@ -269,9 +436,13 @@ development initiatives.
 </div>
 
 </div>
+
 </section>
 
+<!-- Certifications -->
+
 <section id="certifications">
+
 <div class="container">
 
 <h2 class="section-title">Certifications</h2>
@@ -306,9 +477,13 @@ development initiatives.
 </div>
 
 </div>
+
 </section>
 
+<!-- Projects -->
+
 <section id="projects">
+
 <div class="container">
 
 <h2 class="section-title">Featured Projects</h2>
@@ -316,13 +491,17 @@ development initiatives.
 <div class="projects">
 
 <div class="project-card">
+
 <h3>NGCP Panitan Substation Development Plan</h3>
 
 <p>
-Participated in development planning and engineering assessment
-activities involving transmission infrastructure and substation
-integration.
+Participated in engineering assessment,
+development planning,
+and transmission infrastructure integration activities
+supporting substation development initiatives.
 </p>
+
+<br>
 
 <span class="tag">Substation Design</span>
 <span class="tag">Power Systems</span>
@@ -335,10 +514,14 @@ integration.
 <h3>14.5 MW Solar Power Plant Design</h3>
 
 <p>
-Performed solar PV system design, inverter selection,
-array configuration, energy production analysis,
-and grid integration studies.
+Performed PV system design,
+energy production studies,
+inverter selection,
+array configuration,
+and grid integration analysis.
 </p>
+
+<br>
 
 <span class="tag">Solar Energy</span>
 <span class="tag">PV Design</span>
@@ -351,10 +534,14 @@ and grid integration studies.
 <h3>Hydroelectric Plant Engineering Studies</h3>
 
 <p>
-Conducted generator analysis, efficiency evaluation,
-equipment sizing, protection system coordination,
-and electrical calculations.
+Conducted generator analysis,
+equipment sizing,
+efficiency evaluation,
+protection coordination,
+and engineering calculations.
 </p>
+
+<br>
 
 <span class="tag">Hydropower</span>
 <span class="tag">Protection Systems</span>
@@ -365,9 +552,13 @@ and electrical calculations.
 </div>
 
 </div>
+
 </section>
 
+<!-- Leadership -->
+
 <section id="leadership">
+
 <div class="container">
 
 <h2 class="section-title">Leadership & Service</h2>
@@ -378,8 +569,10 @@ and electrical calculations.
 
 <p>
 Youth leader promoting humanitarian values,
-community involvement, emergency preparedness,
-and volunteerism.
+emergency preparedness,
+volunteerism,
+community resilience,
+and service-oriented leadership.
 </p>
 
 <br>
@@ -387,17 +580,23 @@ and volunteerism.
 <h3>Borres Youth Leadership Institute</h3>
 
 <p>
-Institutional representative actively involved in
-leadership development, youth engagement,
-and community empowerment initiatives.
+Institutional representative actively engaged in
+leadership development,
+youth empowerment,
+community engagement,
+and nation-building initiatives.
 </p>
 
 </div>
 
 </div>
+
 </section>
 
+<!-- Philosophy -->
+
 <section id="philosophy">
+
 <div class="container">
 
 <h2 class="section-title">Professional Philosophy</h2>
@@ -405,27 +604,51 @@ and community empowerment initiatives.
 <div class="card">
 
 <blockquote>
-"Engineering is not only about solving technical problems.
+Engineering is not only about solving technical problems.
 It is about creating sustainable solutions that improve lives,
-strengthen communities, and contribute to national development."
+strengthen communities,
+and contribute to national development.
 </blockquote>
 
 </div>
 
 </div>
+
 </section>
+
+<!-- Contact -->
 
 <section id="contact">
 
 <div class="container">
 
-<h2 class="section-title">Contact</h2>
+<h2 class="section-title">Contact Information</h2>
 
 <div class="card contact">
 
-<p><strong>Email:</strong> your@email.com</p>
-<p><strong>Location:</strong> Capiz, Philippines</p>
-<p><strong>LinkedIn:</strong> linkedin.com/in/yourprofile</p>
+<p><strong>Email:</strong> zddurana@heftypower.com.ph</p>
+
+<p>
+<strong>Personal Email:</strong>
+zairo142003@email.com
+</p>
+
+<p>
+<strong>Location:</strong>
+Capiz, Philippines
+</p>
+
+<p>
+<strong>LinkedIn:</strong><br>
+
+<a href="https://www.linkedin.com/in/ur-engr-zairodd-28464a440"
+target="_blank">
+
+linkedin.com/in/ur-engr-zairodd-28464a440
+
+</a>
+
+</p>
 
 </div>
 
@@ -433,15 +656,27 @@ strengthen communities, and contribute to national development."
 
 </section>
 
+<!-- Footer -->
+
 <footer>
 
-<p>All rights Reserved © Zyro John D. Durana 2026 </p>
-    
 <p>
-<a href="https://www.linkedin.com/in/ur-engr-zairodd-28464a440">LinkedIn</a> |
-<a href="mailto:zairo142003@email.com">Email</a>
-<a href="mailto:zddurana@heftypower.com.ph">Email</a>
+© 2026 Zyro John D. Durana.
+All Rights Reserved.
 </p>
+
+<div class="social-icons">
+
+<a href="https://www.linkedin.com/in/ur-engr-zairodd-28464a440"
+target="_blank">
+<i class="fab fa-linkedin"></i>
+</a>
+
+<a href="mailto:zddurana@heftypower.com.ph">
+<i class="fas fa-envelope"></i>
+</a>
+
+</div>
 
 </footer>
 
